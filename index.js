@@ -7,7 +7,20 @@ const port = process.env.PORT || 3000;
 app.use(cors());
 
 app.get("/", (req, res) => {
-  res.send("bcra-proxy-cors server is up and running!");
+  const htmlResponse = `
+    <html>
+      <head>
+        <title>BCRA Proxy CORS</title>
+      </head>
+      <body>
+        <h1>Bienvenido a BCRA Proxy CORS</h1>
+        <p>Se trata de un servidor proxy que permite acceder a la API del Banco Central de Argentina sin encontrarse con conflictos de CORS.</p>
+        <p>Encontra mas información y ejemplos sobre como utilizarlo <a href="https://medium.com/@onthecodenow/solucionando-conflictos-de-cors-al-acceder-a-la-api-del-banco-central-de-argentina-aaf4eb9d2b0f">en este articulo</a>.</p>
+
+      </body>
+    </html>
+  `;
+  res.send(htmlResponse);
 });
 
 app.get("/:url(*)", (req, res) => {
