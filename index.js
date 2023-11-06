@@ -16,6 +16,7 @@ app.get("/", (req, res) => {
         <h1>BCRA Proxy CORS</h1>
         <p>Se trata de un servidor proxy que permite acceder a la API del Banco Central de Argentina sin encontrarse con conflictos de CORS.</p>
         <p>Encontra mas información y ejemplos sobre como utilizarlo <a href="https://onthecodeblog.blogspot.com/2023/10/solucionando-conflictos-de-cors-al.html">en este articulo</a>.</p>
+        <p>Encontra el código <a href="https://github.com/pab-mchn/proxy-bcra">código completo</a>.</p>
       </body>
     </html>
   `;
